@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-    render component: 'Products', props: {products: @products}
   end
 
   # GET /products/1
