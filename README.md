@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 2.4.1
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+* In your terminal, type `bundle install`
 
-* System dependencies
+## Database
 
-* Configuration
+* In your terminal, type `rake db:create`
 
-* Database creation
+* Then `rake db:migrate`
 
-* Database initialization
+* And finally `rake db:seed` to fill in some dummy data.
 
-* How to run the test suite
+## Launch
 
-* Services (job queues, cache servers, search engines, etc.)
+* In your terminal, type `rails s`
 
-* Deployment instructions
+* In your browser, go to `http://localhost:3000/`
 
-* ...
+
+
+
+
+
