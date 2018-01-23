@@ -22,7 +22,7 @@
 
 # Progress
 
-###Completed
+### Completed
 
 * model creation and validations [Check the rails console for property and product property models]
     - Note: ProductProperty must be created as `ProductProperty.create(:value => value, :product_id => id, :property_id:_)`, in order to access as such `Product.first.properties.first.productproperty` and not be `nil`
@@ -31,7 +31,7 @@
 * New Product validation errors are alerted when arise
 * Search Functionality Works and is Dynamic
 
-###Incomplete
+### Incomplete
 * Property and Product Property attributes are not viewable with Product
 * Property and Product Property attributes can not be created on localhost, but can in console.
 * Cannot add new Property and Product Property Components
