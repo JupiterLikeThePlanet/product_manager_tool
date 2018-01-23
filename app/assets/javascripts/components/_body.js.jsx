@@ -3,33 +3,29 @@ var Body = React.createClass({
     componentDidMount() {
         console.log('Component mounted');
         $.getJSON('/api/v1/products.json', (response) => { this.setState({ products: response, filterProducts: response }) });
-
-
-        // var list = []
-        // this.state.products.map( function(product){
-        //     list.push(product.name)
-        // })
-        // console.log("list")
-        // console.log(list)
-        //
-        // this.setState({
-        //     productNames: list
-        // });
-
-
+        $.getJSON('/api/v1/properties.json', (response) => { this.setState({ properties: response }) });
+        $.getJSON('/api/v1/productproperties.json', (response) => { this.setState({ productproperties: response }) });
+    },
+    
+    updateErrorState(message) {
+      this.setState({
+          errors: message
+      })  
     },
 
     getInitialState() {
         return {
             products: [],
             toggle: this.props.toggle,
-            filterProducts: []
+            filterProducts: [],
+            properties: [],
+            productproperties: [],
+            errors: []
         }
     },
     
     handleFilter(updatedList) {
-
-
+        
         this.setState({
             filterProducts: updatedList
         });
@@ -84,8 +80,7 @@ var Body = React.createClass({
 
 
     render(){
-        // console.log("productNames")
-        // console.log(this.state.productNames)
+        console.log(this.state.properties)
         let showNew = ""
         let showAll = ""
         if(this.props.toggle){

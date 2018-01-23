@@ -3,15 +3,6 @@ class Api::V1::ProductsController < Api::V1::BaseController
     respond_with Product.all
   end
 
-  # def search
-  #   @products = Product.search(params[:query])
-  #   if request.xhr?
-  #     render :json => @products.to_json
-  #   else
-  #     render :index
-  #   end
-  # end
-
   def create
     respond_with :api, :v1, Product.create(product_params)
   end
@@ -31,6 +22,7 @@ class Api::V1::ProductsController < Api::V1::BaseController
   def product_params
     params.require(:product).permit(:id, :name, :upc, :available_on)
     #, property_attributes([:name]))
+
     # , productproperty_attributes(:value))
   end
 

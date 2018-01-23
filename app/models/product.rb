@@ -28,8 +28,5 @@ class Product < ApplicationRecord
     Time.now.in_time_zone + 1
   end
 
-  # def one_hour_later
-  #   self.starts_at + 1.hours
-  # end
 
 end

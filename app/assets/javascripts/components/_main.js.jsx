@@ -1,10 +1,4 @@
 var Main = React.createClass({
-
-    // componentDidMount() {
-    //     console.log('Component mounted');
-    //     $.getJSON('/api/v1/products.json', (response) => { this.setState({ products: response }) });
-    // },
-    //
     
     getInitialState() {
         return { 
@@ -29,5 +23,3 @@ var Main = React.createClass({
     }
 });
 
-
-// <Products products=""/>

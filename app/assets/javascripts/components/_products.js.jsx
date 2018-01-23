@@ -1,6 +1,4 @@
 var Products = React.createClass({
-// { productsPath: products_path(:json), searchPath: search_path }
-// }
 
     handleDelete(id) {
         this.props.handleDelete(id);
@@ -43,11 +41,3 @@ var Products = React.createClass({
 
 });
 
-
-// <p> <strong>Properties: </strong> ({product.properties.first.name}: {product.properties.first.productproperty.value}) </p>
-
-// <Search { productsPath: products_path(:json), searchPath: search_path } >
-
-// <p> <strong>Properties: </strong> ({product.properties}: {product.properties.first.productproperty.value}) </p>
-
-// <button onClick={this.handleDelete.bind(this, product.id)} >Delete</button>

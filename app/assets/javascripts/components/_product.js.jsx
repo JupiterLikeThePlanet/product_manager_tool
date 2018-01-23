@@ -35,10 +35,7 @@ var Product = React.createClass({
         var upc = this.state.editable ? <input type='text' ref='upc' defaultValue={this.props.product.upc} />: <p>{this.props.product.upc}</p>;
         var available_on = this.state.editable ? <input type='text' ref='available_on' defaultValue={this.props.product.available_on} />: <p>{this.props.product.available_on}</p>;
 
-
         var productSelf = this
-        // console.log("Product Self:")
-        // console.log(this)
 
         return ( 
             <div>
@@ -54,13 +51,3 @@ var Product = React.createClass({
         ) 
     } 
 });
-
-//<button onClick={this.handleEdit()}> Edit </button>
-
-
-
-// <p>{this.props.product.name}</p>
-// <p>{this.props.product.upc}</p>
-// <p>{this.props.product.available_on}</p>
-// <button onClick={this.props.handleDelete} >Delete</button>
-// <button onClick={this.props.handleEdit}> Edit </button>
