@@ -2,11 +2,11 @@
 
 * Ruby version 2.4.1
 
-## Installation
+### Installation
 
 * In your terminal, type `bundle install`
 
-## Database
+### Database
 
 * In your terminal, type `rake db:create`
 
@@ -14,7 +14,7 @@
 
 * And finally `rake db:seed` to fill in some dummy data.
 
-## Launch
+### Launch
 
 * In your terminal, type `rails s`
 
