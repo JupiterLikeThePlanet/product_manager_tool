@@ -4,8 +4,8 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :upc
       t.datetime :available_on
-      # t.references :productproperty
-      t.references :property
+
+      # t.references :property
 
       t.timestamps
     end

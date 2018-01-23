@@ -4,7 +4,7 @@ class ProductProperty < ApplicationRecord
 
 
   belongs_to :property, dependent: :destroy
-  belongs_to :product
+  belongs_to :product, dependent: :destroy
 
 
 end

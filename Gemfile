@@ -15,6 +15,11 @@ gem 'validates_timeliness', '~> 4.0'
 # gem 'pg', '~> 0.19.0'
 gem 'sqlite3'
 
+gem 'jquery-rails'
+
+gem 'searchkick'
+
+
 gem 'faker', '~>1.7', '>= 1.7.2'
 
 # Use Puma as the app server

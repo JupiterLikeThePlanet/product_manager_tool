@@ -12,25 +12,25 @@ property_id = 0
 ppUpdate = 0
 
 
-# 10.times do
-#   Product.create([{
-#
-#     name: Faker::Commerce.product_name,
-#     upc: Faker::Code.ean,
-#     available_on: Faker::Date.forward(23)
-#
-#   }])
-#
-# end
-#
-# 10.times do
-#   Property.create([{
-#     name: Faker::Lorem.words(1),
-#     product_id: (product_id += 1),
-#     productproperty_id: (productproperty_id += 1)
-#   }])
-# end
-#
+10.times do
+  Product.create([{
+
+    name: Faker::Commerce.product_name,
+    upc: Faker::Code.ean,
+    available_on: Faker::Date.forward(23)
+
+  }])
+
+end
+
+10.times do
+  Property.create([{
+    name: Faker::Lorem.words(1),
+    product_id: (product_id += 1),
+    # productproperty_id: (productproperty_id += 1)
+  }])
+end
+
 10.times do
   ProductProperty.create([{
        value: Faker::Hipster.sentences(1),

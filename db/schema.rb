@@ -26,20 +26,16 @@ ActiveRecord::Schema.define(version: 20180119231331) do
     t.string "name"
     t.string "upc"
     t.datetime "available_on"
-    t.integer "property_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["property_id"], name: "index_products_on_property_id"
   end
 
   create_table "properties", force: :cascade do |t|
     t.string "name"
-    t.integer "productproperty_id"
     t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_properties_on_product_id"
-    t.index ["productproperty_id"], name: "index_properties_on_productproperty_id"
   end
 
 end

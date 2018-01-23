@@ -4,21 +4,18 @@ class Product < ApplicationRecord
 
   validates_numericality_of :upc, on: :create #, message: "UPC must be a number"
   validates :upc, length: {:minimum => 11, :maximum => 13, too_long: "%{count} characters is the maximum allowed", too_short: "%{count} characters is fewer than allowed"}
-    #format: { with: /\A\d+\z/, message: "Integer only. No sign allowed." }
 
   validates_datetime :available_on, :after => :one_day_later #:one_hour_later #, message: "Date must be at least one hour later"
     #:now, #:on_or_after => :one_hour_later,
 
 
-   # has_many :productproperties
-  # has_many :properties, through: :productproperties
-
   has_many :properties
-
   has_one :productproperty, through: :properties , class_name: 'Property::ProductProperty'
-    # has_one productproperty, through: :properties
 
+  accepts_nested_attributes_for :properties, allow_destroy: true
+  # accepts_nested_attributes_for :productproperties, allow_destroy: true
 
+  # searchkick text_start: [‘name’]
 
 
   def one_day_later
