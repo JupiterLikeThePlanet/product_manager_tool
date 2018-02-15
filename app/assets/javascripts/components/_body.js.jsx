@@ -35,6 +35,7 @@ var Body = React.createClass({
         console.log("New Product Saved: " + product);
         var newState = this.state.products.concat(product);
         this.setState({ products: newState })
+        this.handleFilter(newState)
         
     },
 
@@ -75,6 +76,7 @@ var Body = React.createClass({
             data: { product: product },
             success: () => {
                 this.updateProducts(product)
+
                 // this.handleFilter(product)
                 console.log('you updated it!!!'); //this.updateProducts(product); // callback to swap objects
             }
@@ -85,12 +87,15 @@ var Body = React.createClass({
         var products = this.state.products.filter((i) => { return i.id != product.id });
         products.push(product);
 
+        this.handleFilter(products)
         this.setState({products: products });
+
+
     },
 
 
     render(){
-        console.log(this.state.properties)
+        // console.log(this.state.properties)
         let showNew = ""
         let showAll = ""
         if(this.props.toggle){

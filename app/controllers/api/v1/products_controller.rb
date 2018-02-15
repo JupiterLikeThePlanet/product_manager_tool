@@ -4,7 +4,16 @@ class Api::V1::ProductsController < Api::V1::BaseController
   end
 
   def create
-    respond_with :api, :v1, Product.create(product_params)
+
+    @product = Product.new(product_params)
+    # @property = Product.properties.new( :name => "")
+    if @product.save
+      flash[:notice] = "Product was created successfully."
+      respond_with :api, :v1, @product #Product.create(product_params)
+    else
+      respond_with(@product.errors, :status => :unprocessable_entity)
+    end
+
   end
 
   def destroy
@@ -14,16 +23,17 @@ class Api::V1::ProductsController < Api::V1::BaseController
   def update
     product = Product.find(params["id"])
     product.update_attributes(product_params)
-    respond_with Product, json: product
+    respond_with product, json: product
   end
 
   private
 
   def product_params
     params.require(:product).permit(:id, :name, :upc, :available_on)
-    #, property_attributes([:name]))
 
+    #, property_attributes([:name]))
     # , productproperty_attributes(:value))
+
   end
 
 end
