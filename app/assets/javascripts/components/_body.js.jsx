@@ -43,6 +43,7 @@ var Body = React.createClass({
             url: `/api/v1/products/${id}`,
             type: 'DELETE',
             success:() => {
+                console.log("hitting the success, next is remove")
                 this.removeProductClient(id);
             }
         });
@@ -53,10 +54,18 @@ var Body = React.createClass({
         var newProducts = this.state.products.filter((product) => {
             return product.id != id;
         });
+        
+        console.log("made it into remove Product")
+        console.log("Look at newProducts: " + newProducts)
 
         this.setState({
-            products: newProducts
+            products: newProducts,
+            filterProducts: newProducts
         });
+
+        this.handleFilter(newProducts)
+
+ 
     },
 
     handleUpdate(product) {
@@ -66,6 +75,7 @@ var Body = React.createClass({
             data: { product: product },
             success: () => {
                 this.updateProducts(product)
+                // this.handleFilter(product)
                 console.log('you updated it!!!'); //this.updateProducts(product); // callback to swap objects
             }
         }
