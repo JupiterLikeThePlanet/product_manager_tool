@@ -14,14 +14,14 @@ var FilterList = React.createClass({
     },
 
     render: function(){
+
+        // var align = {text-align: 'center';
         
         return (
-            <div className="filter-list">
-                <form>
-                    <fieldset className="form-group">
-                        <input type="text" className="form-control form-control-lg" placeholder="Search" onChange={this.filterList}/>
-                    </fieldset>
-                </form>
+            <div id="" className="filter-list">
+
+                <input type="text" id="search_filter" className="form-control form-control-lg" placeholder="Search" onChange={this.filterList}/>
+
             </div>
         );
     }

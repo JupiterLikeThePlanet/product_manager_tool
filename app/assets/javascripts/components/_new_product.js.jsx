@@ -44,7 +44,7 @@ var NewProduct = React.createClass({
 
     render(){
         return (
-            <div className="form-group">
+            <div className="form-group container">
                 
                 <h1>New Product</h1>
                 <hr/>
@@ -78,9 +78,9 @@ var NewProduct = React.createClass({
                 <br/>
                 <br/>
 
-                <span> <Property uptakePropertyName={this.uptakePropertyName} />  <ProductProperty /> </span>
-
-                <button onClick={this.handleClick} >Submit</button>
+                <div id="indent_left">
+                    <button onClick={this.handleClick} >Submit</button>
+                </div>
             </div>
         )
     }

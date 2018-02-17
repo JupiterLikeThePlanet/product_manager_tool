@@ -19,6 +19,8 @@ gem 'jquery-rails'
 
 gem 'searchkick'
 
+gem 'react-bootstrap-rails'
+
 
 gem 'faker', '~>1.7', '>= 1.7.2'
 

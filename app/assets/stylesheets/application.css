@@ -13,3 +13,188 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Corben", Georgia, Times, serif;
+}
+
+p,
+div {
+    font-family: "Nobile", Helvetica, Arial, sans-serif;
+}
+
+body {
+    /*background-image: url("quill.jpg");*/
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+
+.container {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.27);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.27);
+    background-color: #00a693;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px auto;
+    margin-bottom: 1em;
+    position: static;
+    max-width: 700px;
+    min-width: 275px;
+    max-height: 500px;
+    min-height: 200px;
+    overflow: scroll;
+    opacity: 1;
+}
+.container h1 {
+    color: white;
+}
+.container h2 {
+    color: white;
+}
+.container h3 {
+    color: white;
+}
+.container h4 {
+    color: white;
+}
+
+.container_not_you {
+    background-color: #00a693;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px auto;
+    margin-bottom: 1em;
+    position: static;
+    margin-top: 10em;
+    max-width: 700px;
+    min-width: 275px;
+    max-height: 500px;
+    min-height: 200px;
+    overflow: scroll;
+    opacity: 1;
+}
+
+.outer_container {
+    position: relative;
+    z-index: 1;
+    margin: 100px;
+    display: inline-block;
+}
+
+.margin_header {
+    position: static;
+    color: black;
+    padding: 10px;
+    margin: 30px auto;
+    margin-bottom: -18em;
+    margin-top: 10em;
+    max-width: 700px;
+    min-width: 275px;
+    max-height: 500px;
+    min-height: 200px;
+}
+
+.center_div {
+    margin-top: 10em;
+}
+
+.welcome_boxes {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 300px;
+    margin: 0px auto;
+    background-color: white;
+    opacity: 0.8;
+    color: #9300a6;
+    min-width: 150px;
+}
+
+.flash {
+    -webkit-box-shadow: 7px 8px 5px 0px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 7px 8px 5px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: 7px 8px 5px 0px rgba(0, 0, 0, 0.23);
+    position: relative;
+    top: 100px;
+    left: 20px;
+    font-family: Helvetica;
+    background-color: #9300a6;
+    padding: 10px;
+    margin: 30px auto;
+    border-radius: 20px;
+    width: 30%;
+    color: white;
+    text-align: center;
+    z-index: -1;
+}
+
+#contact_name {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.contact {
+    border-radius: 13px;
+    padding: 25px;
+    background-color: white;
+    color: #9300a6;
+    opacity: 0.6;
+    margin: auto;
+    width: 60%;
+    margin-top: 20px;
+}
+.contact:hover {
+    -webkit-transform: scale(1.007);
+    /* Safari and Chrome */
+}
+
+nav {
+    float: left;
+    position: fixed;
+}
+
+.left {
+    margin-left: 23em;
+}
+
+.top_left {
+    margin-top: -70px;
+    margin-left: 23em;
+}
+
+.solidgold {
+    border-style: groove;
+    border-color: #c5b358;
+}
+
+.label {
+    max-width: 15em;
+    min-width: 2em;
+    margin-right: 1em;
+    display: block;
+}
+
+
+#filter_and_product_top_margin {
+    margin-top: 3em;
+}
+
+body {
+    background: #FFAFBD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}

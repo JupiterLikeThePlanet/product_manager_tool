@@ -3,8 +3,8 @@ var Body = React.createClass({
     componentDidMount() {
         console.log('Component mounted');
         $.getJSON('/api/v1/products.json', (response) => { this.setState({ products: response, filterProducts: response }) });
-        $.getJSON('/api/v1/properties.json', (response) => { this.setState({ properties: response }) });
-        $.getJSON('/api/v1/productproperties.json', (response) => { this.setState({ productproperties: response }) });
+        // $.getJSON('/api/v1/properties.json', (response) => { this.setState({ properties: response }) });
+        // $.getJSON('/api/v1/productproperties.json', (response) => { this.setState({ productproperties: response }) });
     },
     
     updateErrorState(message) {
@@ -70,15 +70,22 @@ var Body = React.createClass({
     },
 
     handleUpdate(product) {
+        console.log("before ajax call")
+        console.log("PRODUCT: " + product.id + ", " + product.name)
         $.ajax({
             url: `/api/v1/products/${product.id}`,
-            type: 'PUT',
+            type: 'PATCH',
             data: { product: product },
             success: () => {
+
                 this.updateProducts(product)
 
-                // this.handleFilter(product)
                 console.log('you updated it!!!'); //this.updateProducts(product); // callback to swap objects
+            },
+            error: function(xhr, textStatus, error){
+                console.log("XHR status text: " + xhr.statusText);
+                console.log("textStatus: " + textStatus);
+                console.log("error: " + error);
             }
         }
     )},
@@ -88,7 +95,7 @@ var Body = React.createClass({
         products.push(product);
 
         this.handleFilter(products)
-        this.setState({products: products });
+        this.setState({products: products});
 
 
     },
@@ -96,6 +103,7 @@ var Body = React.createClass({
 
     render(){
         // console.log(this.state.properties)
+
         let showNew = ""
         let showAll = ""
         if(this.props.toggle){
@@ -112,9 +120,10 @@ var Body = React.createClass({
                     <NewProduct  handleSubmit={this.handleSubmit} />
                 </div>
 
-                <div style={showAll}>
+                <div id="filter_and_product_top_margin" style={showAll} className="">
+
                     <FilterList products={this.state.products} handleFilter={this.handleFilter} />
-                    <Products  products={this.state.filterProducts} handleDelete={this.handleDelete} onUpdate={this.handleUpdate}/>
+                    <Products products={this.state.filterProducts} handleDelete={this.handleDelete} onUpdate={this.handleUpdate}/>
                 </div>
             </div>
         )

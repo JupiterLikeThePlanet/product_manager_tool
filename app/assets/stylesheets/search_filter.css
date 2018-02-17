@@ -1,0 +1,19 @@
+#search_format {
+    margin-right: 46em;
+    margin-left: 14em;
+    margin-bottom: -3em;
+}
+
+#search_width {
+    width: 26em;
+}
+
+#search_filter{
+    text-align: center;
+    width: 46%;
+}
+
+.filter-list {
+    text-align: center;
+    /*width: 100%;*/
+}

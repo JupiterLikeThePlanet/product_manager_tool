@@ -8,8 +8,8 @@ Rails.application.routes.draw do
     namespace :api do
       namespace :v1 do
         resources :products, only: [:index, :create, :destroy, :update]
-        resources :properties, only: [:index, :create, :destroy, :update]
-        resources :productproperties, only: [:index, :create, :destroy, :update] #, :controller => "ProductProperties"
+        # resources :properties, only: [:index, :create, :destroy, :update]
+        # resources :productproperties, only: [:index, :create, :destroy, :update] #, :controller => "ProductProperties"
       end
     end
   end

@@ -23,22 +23,24 @@ ppUpdate = 0
 
 end
 
-10.times do
-  Property.create([{
-    name: Faker::Lorem.words(1),
-    product_id: (product_id += 1),
-    # productproperty_id: (productproperty_id += 1)
-  }])
-end
+# 10.times do
+#   Property.create([{
+#     name: Faker::Lorem.words(1),
+#     product_id: (product_id += 1),
+#     # productproperty_id: (productproperty_id += 1)
+#   }])
+# end
+#
+# 10.times do
+#   ProductProperty.create([{
+#        value: Faker::Hipster.sentences(1),
+#        property_id: (property_id += 1),
+#        product_id: (product_id += 1)
+#    }])
+#
+# end
 
-10.times do
-  ProductProperty.create([{
-       value: Faker::Hipster.sentences(1),
-       property_id: (property_id += 1),
-       product_id: (product_id += 1)
-   }])
 
-end
 #
 #
 #   Property.all.each do |property|

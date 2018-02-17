@@ -29,8 +29,10 @@ var Products = React.createClass({
 
         return (
             <div>
-                <h1>Products</h1>
-                <div id="products">
+
+                <div id="products" className="container">
+                    <h1 id="">All Products</h1>
+                    <hr/>
                     {products}
                 </div>
             </div>

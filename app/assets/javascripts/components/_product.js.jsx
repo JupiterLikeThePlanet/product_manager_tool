@@ -31,14 +31,22 @@ var Product = React.createClass({
 
 
     render() {
-        var name = this.state.editable ? <input type='text' ref='name' defaultValue={this.props.product.name} /> : <p>*{this.props.product.name}</p>;
-        var upc = this.state.editable ? <input type='text' ref='upc' defaultValue={this.props.product.upc} />: <p>{this.props.product.upc}</p>;
-        var available_on = this.state.editable ? <input type='text' ref='available_on' defaultValue={this.props.product.available_on} />: <p>{this.props.product.available_on}</p>;
+        // var date = this.props.product.available_on.toLocaleDateString()
+        var yellow =  {color: 'yellow' }
+        
+
+        var name = this.state.editable ? <div className="margin_bottom"><br/> <span> <p className="update_p" style={yellow}> Product Name: </p> <input className="update_input" type='text' ref='name' defaultValue={this.props.product.name} /></span> <br/><br/></div> : <div><span><p style={yellow} className="inline_text">Product Name: </p> <p className="inline_text"> {this.props.product.name}</p></span></div>;
+        var upc = this.state.editable ? <div className="margin_bottom"> <span> <p className="update_p" style={yellow}> UPC: </p> <input className="update_input" type='text' ref='upc' defaultValue={this.props.product.upc} /> </span> <br/><br/></div>: <div><span><p style={yellow} className="inline_text">UPC: </p> <p className="inline_text"> {this.props.product.upc}</p></span></div>;
+        var available_on = this.state.editable ? <div className="margin_bottom"> <span> <p className="update_p" style={yellow}> Available On: </p> <input className="update_input" type='text' ref='available_on' defaultValue={this.props.product.available_on} /> </span> <br/><br/></div>: <div><span><p style={yellow} className="inline_text"> Available On: </p> <p className="inline_text">{this.props.product.available_on}</p></span></div>;
 
         var productSelf = this
 
+        // const parts = dateTime.split(/[- :]/);
+        // const wanted = `${parts[2]}/${parts[1]}/${parts[0]} ${parts[3]}:${parts[4]}`;
+
         return ( 
             <div>
+
                 {name}
                 {upc}
                 {available_on}
@@ -47,7 +55,9 @@ var Product = React.createClass({
                     |
                     <button onClick={this.handleEdit}> {this.state.editable ? 'Submit' : 'Edit' } </button>
                 </span>
-            </div> 
+                <hr/>
+            </div>
+
         ) 
     } 
 });
